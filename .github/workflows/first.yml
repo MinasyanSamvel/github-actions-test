@@ -1,0 +1,14 @@
+name: Իմ առաջին Workflow-ը
+
+on: push  # Այսինքն՝ ամեն անգամ push-ի դեպքում այս գործողությունները կաշխատեն
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest  # GitHub-ը կստեղծի ժամանակավոր Ubuntu սերվեր
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3  # Քաշում է քո նախագծի ֆայլերը
+
+      - name: Say Hello
+        run: echo "Բարև քեզ GitHub Actions-ից 🚀"
